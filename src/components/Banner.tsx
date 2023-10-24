@@ -22,7 +22,6 @@ const Banner = () => {
          <div className="  py-7 w-full md:w-1/2 flex flex-col gap-3">
             <h1 className=" text-5xl md:text-7xl  font-semibold  capitalize   ">
                <small className=" text-2xl md:text-4xl text-info -mb-10">
-                  {" "}
                   Use Medication Reminder
                </small>
                <br />
@@ -46,7 +45,7 @@ const Banner = () => {
                action={handleNavigation}
             ></ActionButton>
          </div>
-         <div className="w-full md:w-1/2 ">{View}</div>
+         <div className="w-full md:w-1/2 z-[1]">{View}</div>
       </header>
    );
 };
