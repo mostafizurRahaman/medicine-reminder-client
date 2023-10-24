@@ -11,8 +11,8 @@ const Navbar = () => {
          </div>
          <div className="flex gap-3">
             <nav
-               className={`fixed top-20 left-0 md:static text-lg capitalize flex md:flex-row flex-col items-start md:px-0 px-5 w-[230px] md:w-auto bg-info bg-opacity-90 md:bg-transparent md:items-center gap-3 h-[100vh] md:h-auto font-normal duration-500 ease-in-out transition-all ${
-                  show ? "left-0" : "left-[-999px]"
+               className={`fixed top-20 left-0 md:static  capitalize flex md:flex-row flex-col items-start md:px-0 px-5 w-[230px] md:w-auto bg-info bg-opacity-90 md:bg-transparent md:items-center gap-3 h-[100vh]  md:h-auto font-light   duration-500 ease-in-out transition-all text-2xl ${
+                  show ? "left-0" : "left-[-999px] z-[99999]"
                }  `}
             >
                <Link
@@ -50,7 +50,7 @@ const Navbar = () => {
                className="md:hidden block text-accent hover:text-info "
                onClick={() => setShow((prev) => !prev)}
             >
-               {!show ? (
+               {show ? (
                   <IoCloseCircleOutline
                      className="text-red-500"
                      size={25}

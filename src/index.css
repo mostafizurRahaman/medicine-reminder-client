@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+   display: block;
+   font-family: "Teko", sans-serif;
+}
+/* some common styles  */
+.btn {
+   @apply rounded-md bg-accent text-white hover:bg-info duration-500 ease-in-out hover:scale-75;
+}
