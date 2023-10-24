@@ -5,10 +5,14 @@ const ActionButton = ({
    text,
    action,
    children,
+   isDisabled,
 }: buttonProps) => {
    return (
       <button
-         className={` btn flex items-center justify-center gap-3 ${containerStyles}`}
+         className={`  flex items-center justify-center gap-3 ${containerStyles} ${
+            isDisabled && "bg-red-500 cursor-not-allowed"
+         }`}
+         disabled={isDisabled}
          onClick={action}
       >
          <span className="mb-0">{text}</span>

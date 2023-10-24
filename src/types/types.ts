@@ -1,6 +1,8 @@
-import { MouseEvent } from "react"; 
-
+import { MouseEvent, ChangeEvent, FormEvent } from "react";
 
 export type ClickEventType = (e: MouseEvent<HTMLButtonElement>) => void;
-
-
+export type ChangeEventType = (e: ChangeEvent<HTMLInputElement>) => void;
+export type ChangeEventSelectionType = (
+   e: ChangeEvent<HTMLSelectElement>
+) => void;
+export type onSubmitType = (e: FormEvent<HTMLFormElement>) => void;

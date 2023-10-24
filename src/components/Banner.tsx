@@ -18,10 +18,10 @@ const Banner = () => {
 
    const { View } = useLottie(options);
    return (
-      <header className="flex md:flex-row flex-col gap-10 md:gap-5 items-center justify-center w-full  px-5 h-[80vh]   lg:px-10 py-24 ">
+      <header className=" banner flex md:flex-row flex-col gap-10 md:gap-5 items-center justify-center w-full  px-5 h-[80vh]   lg:px-10 py-24 ">
          <div className="  py-7 w-full md:w-1/2 flex flex-col gap-3">
             <h1 className=" text-5xl md:text-7xl  font-semibold  capitalize   ">
-               <small className=" text-2xl md:text-4xl text-info -mb-10">
+               <small className=" text-2xl md:text-3xl text-info -mb-10">
                   Use Medication Reminder
                </small>
                <br />
@@ -41,11 +41,12 @@ const Banner = () => {
                      size={20}
                   ></BiPlus>
                }
-               containerStyles="inline-block hover:bg-info mr-auto text-xl px-10 py-1 flex capitalize"
+               containerStyles=" btn inline-block hover:bg-info mr-auto text-xl px-10 py-1 flex capitalize"
                action={handleNavigation}
+               isDisabled={false}
             ></ActionButton>
          </div>
-         <div className="w-full md:w-1/2 z-[1]">{View}</div>
+         <div className="w-full md:w-1/2 -z-[1]">{View}</div>
       </header>
    );
 };

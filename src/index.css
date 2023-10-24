@@ -1,14 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
    display: block;
-   font-family: "Teko", sans-serif;
+   font-family: "Raleway", sans-serif !important;
 }
+
 /* some common styles  */
 .btn {
    @apply rounded-md bg-accent text-white hover:bg-info duration-500 ease-in-out hover:scale-75;
+}
+
+.inputText {
+   @apply text-base tracking-wider placeholder:tracking-wider w-full border-[1.5px] border-secondary rounded-md px-3 py-1 text-secondary placeholder:text-secondary;
+}
+
+.banner {
+   font-family: "Teko", sans-serif;
 }
