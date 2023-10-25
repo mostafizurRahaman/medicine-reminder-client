@@ -21,6 +21,7 @@ interface InputTextProps {
    initialValue?: string;
    containerStyles?: string;
    err?: string;
+   disabled?: boolean;
 }
 
 interface LoginType {
@@ -63,6 +64,34 @@ interface AuthInfoType {
    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface CommonModalProps {
+   children: React.ReactNode;
+   setShow: React.Dispatch<React.SetStateAction<boolean>>;
+   containerStyles?: string;
+}
+
+interface ReminderTypes {
+   medicineName: string;
+   userName?: string;
+   email?: string;
+   dosage: number;
+   phone: string;
+   careTakerName: string;
+   careTakerPhone: string;
+   medicineTakingsDays: string[];
+   reminderDate: string;
+   remindAt: string;
+}
+interface ReminderErrors {
+   medicineName: string;
+   dosage: string;
+   phone: string;
+   careTakerName: string;
+   careTakerPhone: string;
+   medicineTakingsDays: string;
+   reminderDate: string;
+   remindAt: string;
+}
 export type {
    buttonProps,
    InputTextProps,
@@ -73,4 +102,7 @@ export type {
    AuthInfoType,
    User,
    ChildrenProps,
+   CommonModalProps,
+   ReminderTypes,
+   ReminderErrors,
 };

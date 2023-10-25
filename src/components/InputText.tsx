@@ -10,6 +10,7 @@ const InputText = ({
    initialValue,
    err,
    containerStyles,
+   disabled,
 }: InputTextProps) => {
    return (
       <div className="flex items-start flex-col gap-1 ">
@@ -24,6 +25,7 @@ const InputText = ({
             onChange={action}
             defaultValue={initialValue}
             className={containerStyles}
+            disabled={disabled}
          />
          {err && <ErrorMessage text={err}></ErrorMessage>}
       </div>

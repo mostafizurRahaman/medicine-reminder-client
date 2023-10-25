@@ -10,7 +10,7 @@ const Sidebar = () => {
             open ? "top-0 left-0 md:static" : "top-0 -left-[999px]"
          } `}
       >
-         <div className="flex text-base text-white flex-col  ">
+         <div className="flex text-base font-medium text-white flex-col  ">
             <NavLink
                to="/dashboard/"
                className={({ isActive }) =>
