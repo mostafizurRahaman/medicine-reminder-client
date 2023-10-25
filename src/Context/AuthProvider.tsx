@@ -6,6 +6,7 @@ export const AuthContext = createContext({} as AuthInfoType);
 
 const AuthProvider = ({ children }: ChildrenProps) => {
    const [user, setUser] = useState<User | null>(null);
+   const [open, setOpen] = useState<boolean>(false);
    // const [token, setToken] = useState<string | null>(null);
    const [loading, setLoading] = useState<boolean>(true);
 
@@ -37,7 +38,7 @@ const AuthProvider = ({ children }: ChildrenProps) => {
       localStorage.removeItem("accessToken");
       setUser(null);
    };
-   const authInfo: AuthInfoType = { user, setUser, loading, logOut };
+   const authInfo: AuthInfoType = { user, setUser, loading, logOut, open, setOpen };
    return (
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
    );

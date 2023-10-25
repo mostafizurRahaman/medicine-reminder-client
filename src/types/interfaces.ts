@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 import { ClickEventType } from "./types";
 
 interface ChildrenProps {
@@ -59,6 +59,8 @@ interface AuthInfoType {
    setUser: React.Dispatch<React.SetStateAction<User | null>>;
    loading: boolean;
    logOut: () => void;
+   open: boolean;
+   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export type {
