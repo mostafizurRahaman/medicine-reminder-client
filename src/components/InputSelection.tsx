@@ -9,17 +9,21 @@ interface InputSelectionProps {
    field?: string;
    options: string[];
    selectOp: string;
+   labelStyles: string;
+   initialValue?: string;
 }
 
 const InputSelection = ({
    label,
+   labelStyles,
    data,
    setData,
    field,
    options,
    selectOp,
+   initialValue,
 }: InputSelectionProps) => {
-   const [selected, setSelected] = useState("");
+   const [selected, setSelected] = useState(initialValue);
 
    const handeSelection: ChangeEventSelectionType = (e) => {
       const items = e.target.value;
@@ -35,7 +39,9 @@ const InputSelection = ({
 
    return (
       <div className="flex flex-col gap-1 w-full">
-         <label className="text-white capitalize font-semibold ">{label}</label>
+         <label className={` capitalize font-semibold ${labelStyles}`}>
+            {label}
+         </label>
          <select
             className="w-full rounded-md border-[1.5px]   border-black  -mb-1 px-3 py-[5px]  text-black placeholder:text-black font-normal text-base"
             onChange={handeSelection}

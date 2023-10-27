@@ -4,6 +4,7 @@ import { ClickEventType } from "./types";
 interface ChildrenProps {
    children: React.ReactNode;
 }
+
 interface buttonProps {
    containerStyles?: string;
    text: string;
@@ -22,6 +23,17 @@ interface InputTextProps {
    containerStyles?: string;
    err?: string;
    disabled?: boolean;
+}
+interface InputDateProps {
+   label?: string;
+   name: string;
+   action?: (e: ChangeEvent<HTMLInputElement>) => void;
+   initialDate?: string;
+   containerStyles?: string;
+   err?: string;
+   disabled?: boolean;
+   min?: string;
+   max?: string;
 }
 
 interface LoginType {
@@ -76,20 +88,45 @@ interface ReminderTypes {
    email?: string;
    dosage: number;
    phone: string;
-   careTakerName: string;
-   careTakerPhone: string;
+   frequency: string;
+   careTakerName?: string;
+   careTakerPhone?: string;
    medicineTakingsDays: string[];
-   reminderDate: string;
+   reminderStartDate: string;
+   reminderEndDate: string;
    remindAt: string;
+}
+
+interface ReminderCardProps {
+   _id?: string;
+   createdAt?: string;
+   status?: "active" | "in-active";
+   updatedAt?: string;
+   medicineName: string;
+   userName?: string;
+   email?: string;
+   dosage: number;
+   phone: string;
+   frequency: string;
+   medicineTakingsDays: string[];
+   reminderStartDate: string;
+   reminderEndDate: string;
+   remindAt: string;
+   careTaker?: {
+      name: string;
+      phone: string;
+   };
 }
 interface ReminderErrors {
    medicineName: string;
    dosage: string;
    phone: string;
+   frequency: string;
    careTakerName: string;
    careTakerPhone: string;
    medicineTakingsDays: string;
-   reminderDate: string;
+   reminderStartDate: string;
+   reminderEndDate: string;
    remindAt: string;
 }
 export type {
@@ -105,4 +142,6 @@ export type {
    CommonModalProps,
    ReminderTypes,
    ReminderErrors,
+   ReminderCardProps,
+   InputDateProps,
 };
